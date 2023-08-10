@@ -63,22 +63,24 @@
 <form action="" method="post">
 <label  class="form-label">Tên Sách</label>
     <input type="text" class="form-control" name="tensach" value ="<?= $row['tensach'];?>">
+<br>
+    <label  class="form-label">Tên Tác Giả</label>
+    <input type="text" class="form-control" name="tentacgia" value ="<?= $row['tentacgia'];?>">
+    <br>
 
     <label  class="form-label">Ngày Xuất Bản</label>
-    <input type="text" class="form-control" name="tentacgia" value ="<?= $row['tentacgia'];?>">
-
-    <label  class="form-label">Tên Tác Giả</label>
-    <input type="text" class="form-control" name="ngayxuatban" value ="<?= $row['ngayxuatban'];?>">
-
-<label  class="form-label">THELOAISACH</label>
+    <input type="date" class="form-control" name="ngayxuatban" value ="<?= $row['ngayxuatban'];?>">
+<br>
+    <label  class="form-label">Thể Loại Sách</label>
     <select name="loaisach_id" class="form-control">
     <?php foreach( $loai_sachs as $loai_sach ) {?>
             <option <?=$loai_sach['id'] == $row['loaisach_id'] ? "selected" : " " ?> value="<?=$loai_sach['id'];?>"><?=$loai_sach['tenloaisach'];?></option>
             <?php }; ?>
  
     </select>
-    
-    <button class="btn btn-success">Cập nhật thông tin</button> 
+    <br>
+
+    <button class="btn btn-success">Cập Nhật Thông Tin</button> 
 </form>
 </div>
 

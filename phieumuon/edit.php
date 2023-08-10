@@ -65,29 +65,33 @@
 
 <div class="container-fluid px-4">
 <form action="" method="post">
-<label  class="form-label">ngày mượn sách</label>
-    <input type="text" class="form-control" name="ngaymuonsach" value ="<?= $row['ngaymuonsach'];?>">
+<label  class="form-label">Ngày Mượn Sách</label>
+    <input type="date" class="form-control" name="ngaymuonsach" value ="<?= $row['ngaymuonsach'];?>">
+<br>
+    <label  class="form-label">Ngày Dự Kiến Trả</label>
+    <input type="date" class="form-control" name="ngaydukientra" value ="<?= $row['ngaydukientra'];?>">
+    <br>
 
-    <label  class="form-label">ngày dự kiến trả</label>
-    <input type="text" class="form-control" name="ngaydukientra" value ="<?= $row['ngaydukientra'];?>">
-
-
-    <label  class="form-label">tensach</label>
+    <label  class="form-label">Tên Sách</label>
     <select name="sach_id" class="form-control">
-    <?php foreach( $sachs as $sach ): ?>
-      <option value="<?php echo $sach['id'];?>"><?php echo $sach['tensach'];?></option>
-      <?php endforeach; ?>
+    <?php foreach( $sachs as $sach ) {?>
+            <option <?=$sach['id'] == $row['sach_id'] ? "selected" : " " ?> value="<?=$sach['id'];?>"><?=$sach['tensach'];?></option>
+            <?php }; ?>
     </select>
+    <br>
 
-    <label  class="form-label">sinhvien</label>
+
+    <label  class="form-label">Sinh Viên</label>
     <select name="sinhvien_id" class="form-control">
-    <?php foreach( $sinhviens as $sinhvien ): ?>
-      <option value="<?php echo $sinhvien['id'];?>"><?php echo $sinhvien['tenSV'];?></option>
-      <?php endforeach; ?>
+    <?php foreach( $sinhviens as $sinhvien ) {?>
+            <option <?=$sinhvien['id'] == $row['sinhvien_id'] ? "selected" : " " ?> value="<?=$sinhvien['id'];?>"><?=$sinhvien['tenSV'];?></option>
+            <?php }; ?>
+ 
     </select>
+<br>
+ 
 
-
-    <button class="btn btn-success">Cập nhật thông tin</button>
+    <button class="btn btn-success">Cập Nhật Thông Tin</button>
 </form>
 </div>
 <?php include_once "../includes/footer.php" ?>

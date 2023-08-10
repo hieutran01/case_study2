@@ -1,5 +1,5 @@
 <?php
-    // define('ROOT_URL','http://quan_li_thu_vien.test/');
+    define('ROOT_URL','http://localhost/QLTV/');
     define('ROOT_DIR', dirname(__FILE__) );
 
     $username   = 'root';

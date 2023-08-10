@@ -8,20 +8,17 @@
             </a>
             <a class="nav-link" href="/QLTV/loaisach">
                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                Quản lý loại sách
+              Quản Lý Loại Sách
             </a>
             <a class="nav-link" href="/QLTV/sinhvien">
                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                Quan lý sinh vien
+                Quản Lý Sinh Viên
             </a>
             <a class="nav-link" href="/QLTV/phieumuon">
                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                Quan lý phiếu mượn
+               Quản Lý Phiếu Mượn
             </a>
         </div>
-    </div>
-    <div class="sb-sidenav-footer">
-        <div class="small">Logged in as:</div>
-        Start Bootstrap
-    </div>
+    </div>  
+   
 </nav>
